@@ -35,15 +35,15 @@
 
 <table>
     <tr>
-        <td><img src="resources/images/${phone.id}.1.jpg" width="300"
+        <td><img src="resources/images/phones/${phone.id}.1.jpg" width="300"
                  height="400" alt="phone"></td>
-        <td><img src="resources/images/${phone.id}.2.jpg" width="300"
+        <td><img src="resources/images/phones/${phone.id}.2.jpg" width="300"
                  height="400" alt="phone"></td>
-        <td><img src="resources/images/${phone.id}.3.jpg" width="300"
+        <td><img src="resources/images/phones/${phone.id}.3.jpg" width="300"
                  height="400" alt="phone"></td>
-        <td><img src="resources/images/${phone.id}.4.jpg" width="300"
+        <td><img src="resources/images/phones/${phone.id}.4.jpg" width="300"
                  height="400" alt="phone"></td>
-        <td><img src="resources/images/${phone.id}.5.jpg" width="300"
+        <td><img src="resources/images/phones/${phone.id}.5.jpg" width="300"
                  height="400" alt="phone"></td>
     </tr>
 </table>

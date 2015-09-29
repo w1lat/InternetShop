@@ -12,4 +12,4 @@ target/
 *.classpath
 
 #files
-*.jpg
+images/
