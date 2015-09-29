@@ -1,0 +1,9 @@
+CREATE DATABASE internetShop;
+
+CREATE TABLE phones (
+  id int NOT NULL UNIQUE AUTO_INCREMENT,
+  model VARCHAR (5) NOT NULL,
+  color VARCHAR (10) NOT NULL,
+  memory INT(4) NOT NULL,
+  PRIMARY KEY (id)
+);
