@@ -10,15 +10,15 @@
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Цвет
         <span class="caret"></span></button>
     <ul class="dropdown-menu" role="menu">
-        <li><a href="#">Белый</a></li>
-        <li><a href="#">Черный</a></li>
+        <li><a href="${phonesUrl}?&color=white">Белый</a></li>
+        <li><a href="${phonesUrl}&color=black">Черный</a></li>
     </ul>
 </div>
 <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Модель
         <span class="caret"></span></button>
     <ul class="dropdown-menu" role="menu">
-        <li><a href="#">3</a></li>
+        <li><a href="${phonesUrl}?&color=white">3</a></li>
         <li><a href="#">3s</a></li>
         <li><a href="#">4</a></li>
         <li><a href="#">4s</a></li>

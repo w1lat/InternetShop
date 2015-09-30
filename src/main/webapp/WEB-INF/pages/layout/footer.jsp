@@ -6,8 +6,8 @@
 	<br />
 	<br />
 	<p class="text-muted credit">
-		&copy; Jiri Pinkas 2013 | <a
-			href="https://github.com/jirkapinkas/example-eshop-spring"
+		&copy; Vitalii Balytskii 2015 | <a
+			href="https://github.com/w1lat/InternetShop"
 			target="_blank">This project on Github</a>
 	</p>
 </div>
