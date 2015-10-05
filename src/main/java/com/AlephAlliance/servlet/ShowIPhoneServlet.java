@@ -1,7 +1,10 @@
 package com.AlephAlliance.servlet;
 
 import com.AlephAlliance.DAO.HibernatePhoneDAOImpl;
+import com.AlephAlliance.DAO.PhoneDAO;
 import com.AlephAlliance.model.IPhone;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,11 +20,15 @@ public class ShowIPhoneServlet extends HttpServlet {
     private static final String PARAM_PHONE_ID = "id";
     public static final String PAGE_OK = "WEB-INF/pages/phone.jsp";
 
-    private HibernatePhoneDAOImpl dao;
+    private PhoneDAO dao;
 
     @Override
     public void init() throws ServletException {
-        dao = new HibernatePhoneDAOImpl();
+        ApplicationContext applicationContext = (ApplicationContext)getServletContext()
+              .getAttribute("springContext");
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext
+//                ("classpath:app-context.xml");
+        dao = applicationContext.getBean(PhoneDAO.class);
     }
 
     @Override

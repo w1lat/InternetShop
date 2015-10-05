@@ -1,7 +1,11 @@
 package com.AlephAlliance;
 
 import com.AlephAlliance.DAO.HibernatePhoneDAOImpl;
+import com.AlephAlliance.DAO.PhoneDAO;
 import com.AlephAlliance.model.IPhone;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.HashMap;
 import java.util.List;
@@ -12,7 +16,8 @@ import java.util.Map;
  */
 public class RunApp {
     public static void main(String[] args) {
-        HibernatePhoneDAOImpl dao = new HibernatePhoneDAOImpl();
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:app-context.xml");
+        PhoneDAO dao = applicationContext.getBean(PhoneDAO.class);
         IPhone phone = new IPhone();
         phone.setColor("white");
 //        phone.setModel("4s");
@@ -22,8 +27,11 @@ public class RunApp {
         List<IPhone> list = dao.getPhoneByParameters(phone);
 
         if(list.size() > 0) {
-            for (IPhone p : list)
-                System.out.println(p);
+            int i = 1;
+            for (IPhone p : list) {
+                System.out.println(i + " " + p);
+                i++;
+            }
         }else System.out.println("Sorry, we dont have such phones");
     }
 }

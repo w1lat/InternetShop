@@ -2,6 +2,8 @@ package com.AlephAlliance.utils;
 
 import com.AlephAlliance.model.IPhone;
 import com.AlephAlliance.service.PhoneService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.io.*;
 import java.util.Scanner;
@@ -9,8 +11,10 @@ import java.util.Scanner;
 /**
  * Created by Vitalii on 09.09.2015.
  */
+@Controller
 public class PhoneTXTParser {
 
+    @Autowired
     private PhoneService service;
 
     public PhoneTXTParser() {

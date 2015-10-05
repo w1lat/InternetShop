@@ -1,5 +1,7 @@
 package com.AlephAlliance.model;
 
+import org.springframework.context.annotation.Bean;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;

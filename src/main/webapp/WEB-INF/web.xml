@@ -8,6 +8,16 @@
          version="3.0">
   <display-name>Archetype Created Web Application</display-name>
 
+    <context-param>
+        <param-name>spring-location</param-name>
+        <param-value>classpath:app-context.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>com.AlephAlliance.listener.InitSpringContextListener</listener-class>
+    </listener>
+
+
     <servlet>
         <servlet-name>ShowPhonesServlet</servlet-name>
         <servlet-class>com.AlephAlliance.servlet.ShowIphonesByParametersServlet</servlet-class>

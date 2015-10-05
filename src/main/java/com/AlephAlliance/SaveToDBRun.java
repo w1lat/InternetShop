@@ -5,6 +5,8 @@ import com.AlephAlliance.DAO.PhoneDAO;
 import com.AlephAlliance.service.PhoneService;
 import com.AlephAlliance.service.PhoneServiceImpl;
 import com.AlephAlliance.utils.PhoneTXTParser;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 
@@ -17,9 +19,9 @@ public class SaveToDBRun {
 
     public static void main(String[] args) {
 
-        PhoneDAO dao = new HibernatePhoneDAOImpl();
-        PhoneService service = new PhoneServiceImpl(dao);
-        PhoneTXTParser parser = new PhoneTXTParser(service);
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:app-context.xml");
+
+        PhoneTXTParser parser = applicationContext.getBean(PhoneTXTParser.class);
         try {
             parser.parse(PHONES);
         } catch (IOException e) {

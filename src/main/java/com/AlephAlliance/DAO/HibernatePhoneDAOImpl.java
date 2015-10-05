@@ -3,6 +3,8 @@ package com.AlephAlliance.DAO;
 import com.AlephAlliance.model.IPhone;
 import org.apache.log4j.Logger;
 import com.AlephAlliance.utils.ConnectionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -19,13 +21,18 @@ import java.util.Map;
 /**
  * Created by Vitalii on 08.09.2015.
  */
+@Repository
 public class HibernatePhoneDAOImpl implements PhoneDAO {
 
     private static final Logger LOG = Logger.getLogger(HibernatePhoneDAOImpl.class);
+    @Autowired
     private EntityManagerFactory factory;
 
     public HibernatePhoneDAOImpl() {
-        this.factory = ConnectionFactory.getConnection();
+    }
+
+    public HibernatePhoneDAOImpl(EntityManagerFactory factory) {
+        this.factory = factory;
     }
 
     public List<IPhone> getPhoneByParameters(IPhone phone) {
